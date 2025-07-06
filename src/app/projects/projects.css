@@ -1,0 +1,152 @@
+.projects-section {
+    padding: 2rem;
+    background-color: #ffea35; /* yellow background */
+    color: black;
+  }
+  
+  .project-cards {
+    display: flex;
+    gap: 1rem;
+    overflow-x: auto;
+    padding-bottom: 1rem;
+    scroll-padding: 1rem;
+  }
+  
+  
+  .project-card {
+    background: white;
+    border-radius: 8px;
+    min-width: 150px;    /* smaller min width */
+    max-width: 250px;    /* limit max width */
+    cursor: pointer;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .project-card img {
+    width: 100%;
+    height: 250px;      /* fixed height */
+    object-fit: cover;  /* prevent image stretching */
+    border-radius: 8px 8px 0 0;
+  }
+  
+  .project-info {
+    padding: 0.5rem 1rem;
+    flex-grow: 1;
+    font-size: 0.9rem;
+    overflow: hidden;
+  }
+  
+  .project-details {
+    margin-top: 2rem;
+  }
+  
+  .project-images {
+    display: flex;
+    overflow-x: auto;
+    gap: 0.5rem;
+    padding: 1rem 0;
+    max-width: 100%; /* ensures images don't overflow */
+  }
+  
+  .project-images img {
+    height: 100%;
+    border-radius: 8px;
+  }
+
+  .project-gallery-media {
+    width: 100%;       /* makes media fill the container width */
+    max-height: 500px; /* increase height limit */
+    object-fit: cover; /* keeps aspect ratio and crops if needed */
+    margin-bottom: 1rem;
+    border-radius: 8px;
+  }
+  
+
+  .project-cards {
+    display: flex;
+    flex-wrap: wrap;      /* allows multiple rows */
+    gap: 1rem;            /* spacing between cards */
+  }
+  
+  .project-card {
+    flex: 1 1 calc(33.333% - 1rem); /* 3 cards per row with gap */
+    box-sizing: border-box;
+    cursor: pointer;
+  }
+  
+  .project-thumbnail {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  
+  .project-gallery-media {
+    width: 100%;
+    max-height: 300px; /* or your preferred height */
+    object-fit: cover;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+  }
+  
+  .project-card {
+    transition: transform 0.3s ease;
+  }
+  
+  .project-card:hover {
+    transform: scale(1.05);
+    z-index: 10; /* to make sure it appears above others */
+  }
+ 
+  .project-images {
+    transition: transform 0.3s ease;
+  }
+  
+  .project-images :hover {
+    transform: scale(1.01);
+    z-index: 10;
+  }
+  
+  @media (max-width: 768px) {
+    .project-cards {
+      display: flex !important;              /* force flex on mobile */
+      overflow-x: auto;                      /* enable horizontal scroll */
+      -webkit-overflow-scrolling: touch;    /* smooth scrolling on iOS */
+      
+      
+      
+      display: flex;
+      gap: 1rem;
+      overflow-x: auto;
+      padding-bottom: 1rem;
+      scroll-padding: 1rem;
+    }
+  
+    .project-cards::-webkit-scrollbar {
+      display: none;
+    }
+    .project-cards {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  
+    .project-card {
+      flex: 0 0 80%;                         /* cards take 80% width */
+      scroll-snap-align: start;
+      margin-right: 1rem;
+      box-sizing: border-box;
+      background: white;
+    border-radius: 8px;
+    min-width: 150px;    /* smaller min width */
+    max-width: 250px;    /* limit max width */
+    cursor: pointer;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    }
+  }
+  
