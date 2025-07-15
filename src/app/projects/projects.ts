@@ -33,7 +33,7 @@ export class ProjectsComponent {
     },
     {
       id: 2,
-      title: 'Karim Abotaleb',
+      title: 'Karim Aboutaleb',
       thumbnail: 'assets/karim/karim cover.mp4',
       shortDescription: 'Karim Aboutaleb General Contracting, a distinguished leader in contracting and interior design consultation, renowned for its unwavering reliability, meticulous precision, and cutting-edge designs. Transforming spaces with a modern touch is the brand passion.',
       longDescription: ' Inspired by the brand\'s initial identity, we aimed to concentrate on its core element: design. Our focus was on capturing the brand\'s visual essence, with the letter "K" serving as a motif that integrates seamlessly with the emblem. Through carefully crafted shapes, curves, and cohesive spaces, we created a dynamic element that enhances the brand identity to resonate with the niche market.',
@@ -106,6 +106,7 @@ export class ProjectsComponent {
   ];
 
   selectedProject: Project | null = null; // explicitly typed, can be null initially
+img: any;
 
   selectProject(project: any) {
     this.selectedProject = project;

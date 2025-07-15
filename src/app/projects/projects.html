@@ -1,60 +1,57 @@
 <section id="projects" class="projects-section">
-    <div class="project-cards">
-        <div 
-          class="project-card" 
-          *ngFor="let project of projects" 
-          (click)="selectProject(project)">
-      
-          <!-- Show video if thumbnail ends with .mp4 -->
-          <ng-container *ngIf="project.thumbnail.endsWith('.mp4'); else imageThumb">
-            <video 
-              [src]="project.thumbnail" 
-              autoplay 
-              muted 
-              loop 
-              playsinline
-              class="project-thumbnail">
-            </video>
-          </ng-container>
-      
-          <!-- Fallback to image -->
-          <ng-template #imageThumb>
-            <img 
-              [src]="project.thumbnail" 
-              alt="{{project.title}}" 
-              class="project-thumbnail" />
-          </ng-template>
-      
-          <div class="project-info">
-            <h3>{{ project.title }}</h3>
-            <p>{{ project.shortDescription }}</p>
-          </div>
-        </div>
+  <div class="project-cards">
+    <div 
+      class="project-card" 
+      *ngFor="let project of projects" 
+      (click)="selectProject(project)">
+
+      <!-- Show video if thumbnail ends with .mp4 -->
+      <ng-container *ngIf="project.thumbnail.endsWith('.mp4'); else imageThumb">
+        <video 
+          [src]="project.thumbnail" 
+          autoplay 
+          muted 
+          loop 
+          playsinline
+          class="project-thumbnail">
+        </video>
+      </ng-container>
+
+      <!-- Fallback to image -->
+      <ng-template #imageThumb>
+        <img 
+          [src]="project.thumbnail" 
+          alt="{{project.title}}" 
+          class="project-thumbnail" />
+      </ng-template>
+
+      <div class="project-info">
+        <h3>{{ project.title }}</h3>
+        <p>{{ project.shortDescription }}</p>
       </div>
-      
-  
-    <div *ngIf="selectedProject" class="project-details">
-        <h2>{{ selectedProject?.title }}</h2>
-        <p>{{ selectedProject?.longDescription }}</p>
-        <div class="project-images">
-            <ng-container *ngFor="let img of selectedProject.images">
-              <ng-container *ngIf="img.endsWith('.mp4'); else showImage">
-                <video 
-                [src]="img" 
-                autoplay 
-                muted 
-                loop 
-                playsinline
-                controls
-                class="project-gallery-media">
-                </video>
-              </ng-container>
-              <ng-template #showImage>
-                <img [src]="img" alt="Project image" class="project-gallery-media" />
-              </ng-template>
-            </ng-container>
-          </div>
-          
-      </div>
-  </section>
-  
+    </div>
+  </div>
+
+  <div *ngIf="selectedProject" class="project-details">
+    <h2>{{ selectedProject.title }}</h2>
+    <p>{{ selectedProject.longDescription }}</p>
+    <div class="project-images">
+      <ng-container *ngFor="let img of selectedProject.images">
+        <ng-container *ngIf="img.endsWith('.mp4'); else showImage">
+          <video 
+            [src]="img" 
+            autoplay 
+            muted 
+            loop 
+            playsinline
+            controls
+            class="project-gallery-media">
+          </video>
+        </ng-container>
+        <ng-template #showImage>
+          <img [src]="img" alt="Project image" class="project-gallery-media" />
+        </ng-template>
+      </ng-container>
+    </div>
+  </div>
+</section>

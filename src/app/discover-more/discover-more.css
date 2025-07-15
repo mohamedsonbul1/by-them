@@ -49,7 +49,7 @@
     align-items: center;
     font-family: 'Manrope', sans-serif;
     font-weight: 700;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     color: #000;
     text-align: center;
   }
@@ -67,7 +67,7 @@
     flex-wrap: wrap;
     min-width: 300px; /* ensure enough width */
   }
-  
+
   .right-boxes .box {
     width: 50%;
     height: 50%;
@@ -81,12 +81,14 @@
     font-size: 1rem;
     cursor: pointer;
     user-select: none;
+    transition: font-size 0.3s ease; /* smooth transition */
   }
   
   .right-boxes .box:hover {
-    transform: scale(1.02);
+    font-size: 1.2rem; /* increase font size on hover */
   }
   
+
   /* Individual box colors */
   .box.contact {
     background-color: #B2DDE2;
