@@ -12,7 +12,7 @@
     left: 50%;
     width: 100vw;
     height: 100vh;
-    object-fit: contain;
+    object-fit:fill;
     transform: translate(-50%, -50%);
     z-index: 1;
   }
