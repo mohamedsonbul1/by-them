@@ -75,12 +75,78 @@
     color: #FFEA35;
     transform: scale(1.05);
   }
+
+
+  
+
+  .word-scroll-container {
+    overflow-x: hidden;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    padding-left: 2000px;
+  }
+
+  .word {
+    flex: 0 0 300px;
+    margin-right: 100px; /* space between words */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+
+  .word-track {
+    display: flex;
+    width: calc(12 * 600px); /* 12 words x 300px */
+    animation: scroll-left 40s linear infinite; /* adjust duration */
+    padding-left: 2000px; /* add left padding */
+    box-sizing: content-box;
+  }
+  
+  @keyframes scroll-left {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+    transform: translateX(calc(-600px * 6)); /* scroll the width of 6 words */
+    }
+  }
+  
+  /* Hide scrollbar */
+  .word-scroll-container {
+    overflow-x: hidden;  /* hide manual scrollbar */
+  }
+
+  
+  
+  
+
   
   @media (max-width: 768px) {
     .word-text {
       font-size: 10vw;
       font-weight: 900;
     }
+
+    .word-track {
+        width: calc(12 * 85vw); /* 12 words x (80vw width + 5vw margin) */
+        animation: scroll-left 40s linear infinite;
+      }
+      .word {
+        flex: 0 0 80vw;
+        margin-right: 5vw;
+      }
+      @keyframes scroll-left {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(calc(-85vw * 6));
+        }
+      }
+
   }
   
   
