@@ -31,6 +31,8 @@ export class StartPage implements AfterViewInit {
 
   activeBox: string | null = null;
 
+  
+
   ngAfterViewInit(): void {
     const container = this.trackContainer.nativeElement;
     const firstItem = container.querySelector('.word');
@@ -39,6 +41,14 @@ export class StartPage implements AfterViewInit {
       const scrollTo =
         firstItem.offsetLeft - (container.offsetWidth - firstItem.offsetWidth) / 2;
       container.scrollTo({ left: scrollTo, behavior: 'instant' });
+    }
+
+    const video: HTMLVideoElement | null = document.querySelector('.bg-video');
+    if (video) {
+      video.play().catch(() => {
+        // Autoplay prevented by browser, optionally handle here
+        console.log('Autoplay prevented');
+      });
     }
   }
 
