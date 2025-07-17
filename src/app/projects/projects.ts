@@ -33,9 +33,9 @@ export class ProjectsComponent {
     },
     {
       id: 2,
-      title: 'Karim Aboutaleb',
+      title: 'Karim Abotaleb',
       thumbnail: 'assets/karim/karim cover.mp4',
-      shortDescription: 'Karim Aboutaleb General Contracting, a distinguished leader in contracting and interior design consultation, renowned for its unwavering reliability, meticulous precision, and cutting-edge designs. Transforming spaces with a modern touch is the brand passion.',
+      shortDescription: 'Karim Abotaleb General Contracting, a distinguished leader in contracting and interior design consultation, renowned for its unwavering reliability, meticulous precision, and cutting-edge designs. Transforming spaces with a modern touch is the brand passion.',
       longDescription: ' Inspired by the brand\'s initial identity, we aimed to concentrate on its core element: design. Our focus was on capturing the brand\'s visual essence, with the letter "K" serving as a motif that integrates seamlessly with the emblem. Through carefully crafted shapes, curves, and cohesive spaces, we created a dynamic element that enhances the brand identity to resonate with the niche market.',
       images: [
         'assets/karim/cover.jpg',
@@ -69,7 +69,7 @@ export class ProjectsComponent {
     },
     {
       id: 4,
-      title: 'NeSide',
+      title: 'Nsides',
       thumbnail: 'assets/neside/1_resized_to_video_height.jpg',
       shortDescription: 'Nsides is a trailblazing interior design brand that transforms spaces with a perfect blend of creativity, precision, and innovation.',
       longDescription: 'With a philosophy centered on balance and interconnectedness, Nsides creates environments that harmoniously fuse functionality and beauty, ensuring each design narrates its unique story. Core to Nsides’ identity is a strong commitment to structure and harmony. This is embodied in our branding, where the logo reflects cohesion and versatility—crucial elements of our design philosophy. The interwoven circular motifs symbolize the vibrant relationship between space and form, while the asymmetry infuses a daring, avant-garde flair that showcases our ability to push the boundaries of traditional design',
@@ -90,7 +90,7 @@ export class ProjectsComponent {
     },
     {
       id: 5,
-      title: 'Beuverage',
+      title: 'Royal Beaurivage',
       thumbnail: 'assets/bea/royal cover.mp4',
       shortDescription: 'A MASTERPIECE OF LUXURY CRAFTED FOR THE NILE',
       longDescription: 'Smart Luxurious Nile Cruise Our five-star Nile cruise invites you to explore the breathtaking landscapes and rich history of Egypt in unparalleled comfort. With opulent cabins, exquisite dining options, and a commitment to exceptional service, every moment spent on the Royal Beau Rivage is designed to create unforgettable memories',
